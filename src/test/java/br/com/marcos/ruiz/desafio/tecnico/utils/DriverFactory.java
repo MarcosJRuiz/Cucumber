@@ -4,7 +4,6 @@ package br.com.marcos.ruiz.desafio.tecnico.utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +17,6 @@ public class DriverFactory {
     private static final long TIME_IMPLICIT = 5 ;
     private static final String DRIVER_CHROME = Utils.getProp("ch_driver");
     private static WebDriver driver;
-    private static DesiredCapabilities caps;
 
     /**
      * Método para fechar o Driver.
@@ -33,15 +31,13 @@ public class DriverFactory {
     /**
      * Método de criação do Driver com suas capacidades.
      *
-     * @return Driver instanciado
-     *
      * @author <a href="mailto:marcosruiz.jt@gmail.com">Marcos Ruiz</a>
      */
     public static void getDriver(String url, boolean headless) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("—-disable-gpu");
-        options.addArguments("--window-size=1280,1720");
+        options.addArguments("--window-size=1200,1500");
         options.addArguments("--ignore-ssl-errors=yes");
         options.addArguments("--ignore-certificate-errors");
         if (headless) options.addArguments("--headless");
