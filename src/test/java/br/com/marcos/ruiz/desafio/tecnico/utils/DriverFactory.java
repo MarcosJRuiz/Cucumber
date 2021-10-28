@@ -41,7 +41,7 @@ public class DriverFactory {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("—-disable-gpu");
-        options.addArguments("--window-size=1280,720");
+        options.addArguments("--window-size=1280,1720");
         options.addArguments("--ignore-ssl-errors=yes");
         options.addArguments("--ignore-certificate-errors");
         if (headless) options.addArguments("--headless");
@@ -51,6 +51,10 @@ public class DriverFactory {
         driver.get(url);
         driver.manage().window().maximize();
         System.out.println("Driver Chrome instanciado com URL: " + url);
+    }
+
+    public static WebDriver getDriverBrowser() {
+        return driver;
     }
 
 }
