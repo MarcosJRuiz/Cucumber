@@ -24,8 +24,8 @@ public class EnterVehicleDataPages extends Browser {
     public static void setDateOfManufacture(String value){
         String[] adata = value.split("/");
         clicar(By.id("opendateofmanufacturecalender"));
-        clicar(By.xpath("//a[@class=\"ui-datepicker-prev ui-corner-all\"]"));
         clicar(By.xpath("//a[ .='"+ adata[0] +"']"));
+        digitar(By.id("dateofmanufacture"),adata[1]+"/"+adata[0]+"/"+adata[2] );
     }
 
     public static void setNumberOfSeats(String option){
