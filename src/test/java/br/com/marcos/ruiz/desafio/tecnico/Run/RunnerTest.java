@@ -1,4 +1,4 @@
-package resources;
+package br.com.marcos.ruiz.desafio.tecnico.Run;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
