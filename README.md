@@ -22,4 +22,4 @@ Observe no terminal que ao final da execução é gerado o link do report.
 
 ***Segue abaixo um exemplo do report.***
 
-![Report](src/images/Report.jpg)
+![Report](src/images/report.jpg)
